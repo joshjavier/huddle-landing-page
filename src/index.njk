@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="./images/favicon-32x32.png" />
+
+    <title>Huddle landing page | A Frontend Mentor Challenge</title>
+    <meta name="description"
+          content="A solution to Frontend Mentor's Huddle landing page challenge" />
+
+    <link rel="stylesheet" href="global.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap"
+          rel="stylesheet">
+  </head>
+  <body>
+    {% include "symbol-defs.svg" %}
+
+    <header>
+      <a href="#">
+        <img src="images/logo.svg" alt="Huddle landing page" class="logo" />
+      </a>
+    </header>
+
+    <main>
+      <article>
+        <div class="hero-image">
+          <img src="images/illustration-mockups.svg" alt="" />
+        </div>
+        <div class="flow hero-text">
+          <h1>Build The Community Your Fans Will Love</h1>
+          <p>
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <a href="#" class="cta">Register</a>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <ul>
+        {% for item in ['facebook', 'twitter', 'instagram'] %}
+          <li>
+            <a href="#" class="icon">
+              <svg aria-hidden="true" focusable="false">
+                <use xlink:href="#icon-{{ item }}" />
+              </svg>
+              <span class="visually-hidden">{{ item | capitalize }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </footer>
+  </body>
+</html>

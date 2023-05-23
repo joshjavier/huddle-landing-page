@@ -1,0 +1,10 @@
+/* Import modern-css-reset from node_modules */
+@import 'modern-css-reset/dist/reset.css';
+
+/* Import globals and composition */
+@import-glob 'global/*.css';
+@import 'composition.css';
+
+/* Import blocks and utilities */
+@import-glob 'utilities/*.css';
+@import-glob 'blocks/*.css';

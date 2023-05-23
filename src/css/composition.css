@@ -1,0 +1,41 @@
+header,
+main,
+footer {
+  padding-block: var(--space-s-l);
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+main article {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-s-l);
+
+  > * {
+    flex-grow: 1;
+  }
+
+  .hero-text {
+    flex-basis: 32rem;
+  }
+
+  @media (orientation: landscape) {
+    .hero-text {
+      text-align: left;
+      margin-top: var(--space-l);
+    }
+  }
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+
+  @media (orientation: landscape) {
+    justify-content: flex-end;
+  }
+}
